@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using Dapper;
 using System.Configuration;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace DataLayer.Dapper
 {
     public class ContactRepository : IContactRepository
     {
-        private IDbConnection db = new SqlConnection(System.ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
+        private IDbConnection db = new SqlConnection(@"Data Source=DESKTOP-S4RCJLC\SQLSRV;Initial Catalog=ContactsDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True"); //new SqlConnection(System.ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
         public Contact Add(Contact contact)
         {
             throw new NotImplementedException();
@@ -24,7 +25,7 @@ namespace DataLayer.Dapper
 
         public List<Contact> GetAll()
         {
-            throw new NotImplementedException();
+            return this.db.Query<Contact>("SELECT * FROM Contacts").ToList();
         }
 
         public Contact GetFullContact(int id)
