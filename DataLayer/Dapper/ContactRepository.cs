@@ -12,7 +12,11 @@ namespace DataLayer.Dapper
 {
     public class ContactRepository : IContactRepository
     {
-        private IDbConnection db = new SqlConnection(@"Data Source=DESKTOP-S4RCJLC\SQLSRV;Initial Catalog=ContactsDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True"); //new SqlConnection(System.ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
+        //  private IDbConnection db = new SqlConnection(System.ConfigurationManager.ConnectionStrings["contactsDB"].ConnectionString);
+        // Home SqlServer connection string
+        //string connectionString = @"Data Source=DESKTOP-S4RCJLC\SQLSRV;Initial Catalog=ContactsDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True";
+        private static string connectionString = @"Data Source=OLEKSANDR-KUZIA\SQLEXPRESS;Initial Catalog=ContactsDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True";
+        private IDbConnection db = new SqlConnection(connectionString);
         public Contact Add(Contact contact)
         {
             throw new NotImplementedException();

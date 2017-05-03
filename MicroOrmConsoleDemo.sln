@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroOrmConsoleDemo", "MicroOrmConsoleDemo\MicroOrmConsoleDemo.csproj", "{056FA885-EC73-44DF-A667-9D5B41A8C719}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{59771640-67EA-42E7-A5B8-3FD5DD453065}"
 	ProjectSection(SolutionItems) = preProject
 		database-setup.sql = database-setup.sql
@@ -28,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Release|Any CPU.Build.0 = Release|Any CPU
 		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

@@ -66,3 +66,7 @@ INSERT INTO [dbo].[Addresses] VALUES (3, 'Home', '123 Main Street', 'Los Angeles
 INSERT INTO [dbo].[Addresses] VALUES (4, 'Home', '123 Main Street', 'Oklahoma City', 40, '73101');
 INSERT INTO [dbo].[Addresses] VALUES (5, 'Home', '123 Main Street', 'Cleveland', 39, '44101');
 INSERT INTO [dbo].[Addresses] VALUES (6, 'Home', '456 Main Street', 'Los Angeles', 6, '90003');
+
+SELECT * FROM dbo.Addresses;
+SELECT * FROM dbo.Contacts;
+SELECT * FROM dbo.States;
