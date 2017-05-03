@@ -68,5 +68,8 @@ INSERT INTO [dbo].[Addresses] VALUES (5, 'Home', '123 Main Street', 'Cleveland',
 INSERT INTO [dbo].[Addresses] VALUES (6, 'Home', '456 Main Street', 'Los Angeles', 6, '90003');
 
 SELECT * FROM dbo.Addresses;
-SELECT * FROM dbo.Contacts;
 SELECT * FROM dbo.States;
+SELECT * FROM dbo.Contacts;
+DELETE FROM	 dbo.Contacts WHERE FirstName='Joe';
+DELETE FROM	 dbo.Contacts WHERE FirstName='Bob';
+SELECT * FROM dbo.Contacts;

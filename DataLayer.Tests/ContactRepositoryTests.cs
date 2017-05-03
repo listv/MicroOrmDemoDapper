@@ -34,7 +34,7 @@ namespace DataLayer.Tests
                 FirstName = "Joe",
                 LastName = "Blow",
                 Email = "joe.blow@gmail.com",
-                Company = "Micrososft",
+                Company = "Microsoft",
                 Title = "developer"
             };
 
@@ -62,7 +62,8 @@ namespace DataLayer.Tests
             contact.FirstName.Should().Be("Joe");
             contact.LastName.Should().Be("Blow");
             contact.Email.Should().Be("joe.blow@gmail.com");
-            contact.Title.Should().Be("Developer");
+            contact.Company.Should().Be("Microsoft");
+            contact.Title.Should().Be("developer");
         }
 
         [TestMethod]

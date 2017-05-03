@@ -19,17 +19,22 @@ namespace DataLayer.Dapper
         private IDbConnection db = new SqlConnection(connectionString);
         public Contact Add(Contact contact)
         {
-            throw new NotImplementedException();
+            var sql = "INSERT INTO Contacts(FirstName, LastName, Email, Company, Title) VALUES(@FirstName, @LastName, @Email, @Company, @Title);" +
+                "SELECT CAST(SCOPE_IDENTITY() AS int);";
+            var id = this.db.Query<int>(sql, contact).Single();
+            contact.Id = id;
+            return contact;
         }
 
         public Contact Find(int id)
         {
-            throw new NotImplementedException();
+            var contact= this.db.Query<Contact>("SELECT * FROM Contacts WHERE Id=@Id", new { id }).SingleOrDefault();
+            return contact;
         }
 
         public List<Contact> GetAll()
         {
-            return this.db.Query<Contact>("SELECT * FROM Contacts").ToList();
+            return db.Query<Contact>("SELECT * FROM Contacts").ToList();
         }
 
         public Contact GetFullContact(int id)
@@ -39,7 +44,7 @@ namespace DataLayer.Dapper
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            this.db.Execute("DELETE FROM Contacts WHERE Id = @Id", new { Id = id });
         }
 
         public void Save(Contact contact)
@@ -49,7 +54,16 @@ namespace DataLayer.Dapper
 
         public Contact Update(Contact contact)
         {
-            throw new NotImplementedException();
+            var sql =
+                "UPDATE Contacts " +
+                "SET FirstName = @FirstName, " +
+                "    LastName  = @LastName, " +
+                "    Email     = @Email, " +
+                "    Company   = @Company, " +
+                "    Title     = @Title " +
+                "WHERE  Id = @Id;";
+            this.db.Execute(sql, contact);
+            return contact;
         }
     }
 }
