@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroOrmConsoleDemo", "MicroOrmConsoleDemo\MicroOrmConsoleDemo.csproj", "{056FA885-EC73-44DF-A667-9D5B41A8C719}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{59771640-67EA-42E7-A5B8-3FD5DD453065}"
+	ProjectSection(SolutionItems) = preProject
+		database-setup.sql = database-setup.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "McroOrmDemoDapper", "McroOrmDemoDapper", "{07B92817-0641-4A66-BCB3-BA4A4E2D8AE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C91E65B4-7EBE-4499-972D-EEEEA269004A}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{77C58B09-5A32-4DE5-B674-017840D48AC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{47FFB542-F230-4158-A460-12E07B596D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{6B59C9DC-911D-47F2-9A65-74276A4CD839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.Tests", "DataLayer.Tests\DataLayer.Tests.csproj", "{958E2B93-4DC4-441E-97C0-65399A86743C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056FA885-EC73-44DF-A667-9D5B41A8C719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C58B09-5A32-4DE5-B674-017840D48AC5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6B59C9DC-911D-47F2-9A65-74276A4CD839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B59C9DC-911D-47F2-9A65-74276A4CD839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B59C9DC-911D-47F2-9A65-74276A4CD839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B59C9DC-911D-47F2-9A65-74276A4CD839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958E2B93-4DC4-441E-97C0-65399A86743C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958E2B93-4DC4-441E-97C0-65399A86743C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958E2B93-4DC4-441E-97C0-65399A86743C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958E2B93-4DC4-441E-97C0-65399A86743C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C91E65B4-7EBE-4499-972D-EEEEA269004A} = {07B92817-0641-4A66-BCB3-BA4A4E2D8AE8}
+		{77C58B09-5A32-4DE5-B674-017840D48AC5} = {C91E65B4-7EBE-4499-972D-EEEEA269004A}
+		{47FFB542-F230-4158-A460-12E07B596D21} = {07B92817-0641-4A66-BCB3-BA4A4E2D8AE8}
+		{6B59C9DC-911D-47F2-9A65-74276A4CD839} = {07B92817-0641-4A66-BCB3-BA4A4E2D8AE8}
+		{958E2B93-4DC4-441E-97C0-65399A86743C} = {47FFB542-F230-4158-A460-12E07B596D21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
